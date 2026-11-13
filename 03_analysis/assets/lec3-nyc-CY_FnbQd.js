@@ -1,0 +1,1 @@
+var e=``+new URL(`../images/lec3-nyc.png`,import.meta.url).href;export{e as t};

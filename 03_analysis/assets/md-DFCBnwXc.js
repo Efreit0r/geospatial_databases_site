@@ -1,0 +1,10 @@
+import{H as e,L as t,T as n,X as r,Z as i,_ as a,_t as o,b as s,g as c,ht as l,y as u}from"./modules/shiki-pVwvuQkB.js";import{t as d}from"./slidev/default-Did6iOBq.js";import{nt as f,rt as p}from"./index-U7BydiWx.js";var m={class:`grid grid-cols-2 gap-4 mt-3`},h={class:`text-xs space-y-2`},g={class:`vec-tile`},_={class:`vec-tile`},v={class:`vec-block vec-block--warn text-xs`},y={__name:`03_analysis.md__slidev_12`,setup(y){let{$slidev:b,$nav:x,$clicksContext:S,$clicks:C,$page:w,$renderContext:T,$frontmatter:E}=p();return S.setup(),(p,y)=>{let b=e(`click`);return t(),a(d,o(n(l(f)(l(E),11))),{default:r(()=>[y[4]||=c(`h1`,null,`Практика: безопасное обновление`,-1),y[5]||=c(`div`,{class:`gdb-time`},`8 минут`,-1),y[6]||=c(`div`,{class:`vec-tile mt-2`},[s(` Добавьте в `),c(`code`,null,`trubka`),s(` столбец `),c(`code`,null,`status`),s(`, отметьте точки с `),c(`code`,null,`"T" > 13`),s(` как `),c(`code`,null,`hot`),s(`, остальные — `),c(`code`,null,`normal`),s(`. `)],-1),c(`div`,m,[y[3]||=c(`div`,null,[c(`details`,{class:`ras-toggle text-xs`},[c(`summary`,null,`Показать решение`),c(`pre`,{class:`mt-2`},[c(`code`,null,`ALTER TABLE trubka
+ADD COLUMN status text DEFAULT 'normal';
+BEGIN;
+UPDATE trubka
+SET status = 'hot'
+WHERE "T" > 13;
+SELECT status, count(*)
+FROM trubka
+GROUP BY status;
+COMMIT;`)])])],-1),c(`div`,h,[i((t(),u(`div`,g,[...y[0]||=[c(`b`,null,`Проверка:`,-1),s(` до `,-1),c(`code`,null,`UPDATE`,-1),s(` выполните `,-1),c(`code`,null,`SELECT count(*) ... WHERE "T" > 13`,-1),s(`. `,-1)]])),[[b]]),i((t(),u(`div`,_,[...y[1]||=[c(`b`,null,`Ограничение:`,-1),s(),c(`code`,null,`CHECK ("T" BETWEEN -50 AND 50)`,-1),s(` защитит от ошибочных значений. `,-1)]])),[[b]]),i((t(),u(`div`,v,[...y[2]||=[c(`b`,null,`Кавычки:`,-1),s(),c(`code`,null,`"T"`,-1),s(` и `,-1),c(`code`,null,`"N-test"`,-1),s(` чувствительны к регистру — это имена столбцов. `,-1)]])),[[b]])])])]),_:1},16)}}};export{y as default};
